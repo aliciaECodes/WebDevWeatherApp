@@ -1,12 +1,12 @@
 h1 {
-  color: #9973e2;
+  color: #9b45e4;
   font-size: 26px;
   font-weight: 800;
 }
 
 h2 {
   font-size: 26px;
-  color: #9973e2;
+  color: #9b45e4;
   font-weight: 800;
 }
 
@@ -14,7 +14,7 @@ footer {
   text-align: center;
   margin: 0 auto;
   font-family: "Nova Mono", monospace;
-  color: #9973e2;
+  color: #9b45e4;
   font-weight: bold;
 }
 
@@ -26,7 +26,7 @@ footer {
 }
 
 .container {
-  color: #9973e2;
+  color: #9b45e4;
   font-family: "Nova Mono", monospace;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   border: 2px solid #2772db;
@@ -44,7 +44,7 @@ footer {
   margin: 10px;
   padding: 10px;
   font-size: 14px;
-  color: #9973e2;
+  color: #9b45e4;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   border: 2px solid #2772db;
   border-radius: 12px;
