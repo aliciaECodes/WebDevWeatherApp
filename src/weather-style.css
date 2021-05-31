@@ -19,9 +19,8 @@ footer {
 }
 
 p {
-  display: inline;
-  position: center;
-  left: 40%;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .weather-woman {
@@ -71,4 +70,9 @@ p {
 
 a:link {
   text-decoration: none;
+}
+
+#current-temp {
+  font-size: 42px;
+  font-weight: bold;
 }

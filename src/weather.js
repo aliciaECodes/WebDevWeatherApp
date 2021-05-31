@@ -43,15 +43,19 @@ let h2 = document.querySelector("h2");
 h2.innerHTML = `${day}, ${month} ${date}, ${year}`;
 
 let p = document.querySelector("#current-time");
-p.innerHTML = `Currently ${hours}:${minutes}`;
+p.innerHTML = `Time: ${hours}:${minutes}`;
 
 function displayWeather(response) {
-  document.querySelector("#current-city").innerHTML = response.data.name;
-  document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-
+  let descriptionElement = document.querySelector("#current-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
+  document.querySelector("#current-city").innerHTML = response.data.name;
+  let tempElement = document.querySelector("#current-temp");
+  tempElement.innerHTML = Math.round(response.data.main.temp) + "℉";
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity + "%";
+  windElement.innerHTML = Math.round(response.data.wind.speed) + "km/h";
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
