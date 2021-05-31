@@ -21,6 +21,8 @@ footer {
 p {
   text-transform: capitalize;
   font-weight: bold;
+  line-height: 1;
+  padding: 0;
 }
 
 .weather-woman {
@@ -73,6 +75,6 @@ a:link {
 }
 
 #current-temp {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: bold;
 }

@@ -50,9 +50,10 @@ function displayWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
-  document.querySelector("#current-city").innerHTML = response.data.name;
+  let cityElement = document.querySelector("#current-city");
   let tempElement = document.querySelector("#current-temp");
   tempElement.innerHTML = Math.round(response.data.main.temp) + "℉";
+  cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity + "%";
   windElement.innerHTML = Math.round(response.data.wind.speed) + "km/h";
