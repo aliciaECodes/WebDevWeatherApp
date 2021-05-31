@@ -18,6 +18,12 @@ footer {
   font-weight: bold;
 }
 
+p {
+  display: inline;
+  position: center;
+  left: 40%;
+}
+
 .weather-woman {
   display: block;
   position: relative;
