@@ -43,7 +43,7 @@ let h2 = document.querySelector("h2");
 h2.innerHTML = `${day}, ${month} ${date}, ${year}`;
 
 let p = document.querySelector("#current-time");
-p.innerHTML = `Time: ${hours}:${minutes}`;
+p.innerHTML = `Last Updated: ${hours}:${minutes}`;
 
 function displayWeather(response) {
   let descriptionElement = document.querySelector("#current-description");
