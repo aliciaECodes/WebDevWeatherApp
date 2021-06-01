@@ -35,7 +35,7 @@ p {
 .container {
   color: #000;
 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
     -180deg,
     rgba(255, 255, 255, 0.5) 0%,
@@ -72,7 +72,7 @@ p {
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   font-weight: 800;
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .card:hover {
   background: #f7f7f7;
