@@ -45,6 +45,30 @@ h2.innerHTML = `${day}, ${month} ${date}, ${year}`;
 let p = document.querySelector("#current-time");
 p.innerHTML = `Last Updated: ${hours}:${minutes}`;
 
+function displayForecast(day) {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `  
+          <div class="col-2">
+              <div class="forecast-date">${day}</div>
+               <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="weather-icon"
+              id="icon"
+              width="42"
+            />
+              <span class="forecast-max"> 67°</span> | <span class="forecast-min">58°</span>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   let descriptionElement = document.querySelector("#current-description");
   let humidityElement = document.querySelector("#humidity");
@@ -73,3 +97,5 @@ function searchWeather(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
+
+displayForecast();

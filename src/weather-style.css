@@ -56,7 +56,6 @@ p {
   margin: 10px;
   padding: 10px;
   font-size: 16px;
-  text-align: center;
   color: #000;
   background: linear-gradient(
     to top,
@@ -74,12 +73,6 @@ p {
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   font-weight: 800;
   transition: all 200ms ease-in-out;
-}
-
-.weather-forecast-max,
-.weather-forecast-min {
-  font-size: 13px;
-  color: rgb(103, 35, 182);
 }
 
 a:link {
