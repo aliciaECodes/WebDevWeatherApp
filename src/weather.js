@@ -45,28 +45,36 @@ h2.innerHTML = `${day}, ${month} ${date}, ${year}`;
 let p = document.querySelector("#current-time");
 p.innerHTML = `Last Updated: ${hours}:${minutes}`;
 
-function displayForecast(day) {
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `  
           <div class="col-2">
-              <div class="forecast-date">${day}</div>
+              <div class="forecast-date">${forecastDay.dt}</div>
                <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
               alt="weather-icon"
               id="icon"
               width="42"
             />
-              <span class="forecast-max"> 67°</span> | <span class="forecast-min">58°</span>
+              <span class="forecast-max"> ${forecastDay.temp.max}°</span> | <span class="forecast-min">${forecastDay.temp.min}°</span>
           </div>`;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "850cf6241a6629de5c5d40adffb2f608";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial `;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeather(response) {
@@ -85,6 +93,8 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function searchWeather(event) {
@@ -97,5 +107,3 @@ function searchWeather(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
-
-displayForecast();
