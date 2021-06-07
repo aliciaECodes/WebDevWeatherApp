@@ -53,7 +53,7 @@ p::first-letter {
 .weather-forecast {
   margin: 10px;
   padding: 10px;
-  font-size: 14px;
+  font-size: 12px;
   color: #000;
   background: linear-gradient(
     to top,

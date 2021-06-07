@@ -76,6 +76,7 @@ function displayForecast(response) {
               id="icon"
               width="42"
             />
+            <br />
               <span class="forecast-max"> ${Math.round(
                 forecastDay.temp.max
               )}°</span> | <span class="forecast-min">${Math.round(
@@ -108,7 +109,7 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed) + " mph";
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
   getForecast(response.data.coord);
