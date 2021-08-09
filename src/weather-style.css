@@ -53,7 +53,7 @@ p::first-letter {
   padding: 10px;
   font-size: 12px;
   color: #000;
-
+  background-color: #808080a1;
   border: 2px none #fff;
   border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -65,9 +65,9 @@ p::first-letter {
 }
 
 .weather-forecast:hover {
-  background: #fff;
+  background-color: #808080a1;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .forecast-min {
