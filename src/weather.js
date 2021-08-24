@@ -125,3 +125,5 @@ function searchWeather(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
+
+search("New York");
